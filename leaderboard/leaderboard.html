@@ -1,0 +1,16 @@
+<head> 
+	<title>Leaderboard</title>
+</head>
+<body>
+	<h1>Leaderboard</h1> 
+	{{> science}}
+</body>
+
+<template name="science">
+	<ul>
+		{{#each player}}
+			<li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+		{{/each}}
+	</ul>
+	<input type="button" id="increment" value="Give 5 Points" />
+</template>
